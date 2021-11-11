@@ -20,7 +20,8 @@ class Solution(object):
         dp[0] = 0
         dp[1] = 0
         for i in range(2, n+1):
-            dp[i] = dp[i-1]*10+(9*pow(10,i-2) - dp[i-1])*(i-1);
+            dp[i] = dp[i-1]*10 + \
+                    (9*pow(10,i-2) - dp[i-1])*(i-1);
 
         return pow(10, n) - sum(dp)
 
